@@ -2,17 +2,15 @@ const inputEl = (document.getElementsByClassName('app__controls-input'))[0]
 const btnEl = (document.getElementsByClassName('app__controls-button'))[0]
 const listEl = (document.getElementsByClassName('app__list'))[0]
 
-//console.log(inputEl);
-//console.log(btnEl);
-//console.log(listEl);
-
 
 function createTask(someText) {
     const root = document.createElement('div')
     root.classList.add('app_list-item')
 
+
     const input = document.createElement('input')
     input.classList.add('app__list-checkbox')
+
     input.type = 'checkbox'
 
     const txt = document.createElement('p')
@@ -31,10 +29,13 @@ function createTask(someText) {
     root.appendChild(input)
     root.appendChild(txt)
     root.appendChild(btn)
+    return root
 }
 
 btnEl.addEventListener('click', () => {
     const textValue = inputEl.value
-    console.log(textValue);
-    
+    const taskEl = createTask(textValue)
+    listEl.appendChild(taskEl)
+    inputEl.value = ''
 })
+
