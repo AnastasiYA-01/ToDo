@@ -23,6 +23,7 @@ function createTask(someText) {
     const img = document.createElement('img')
     img.src = './12.png'
     img.alt = 'trash'
+    img.width = 20
 
     btn.appendChild(img)
 
