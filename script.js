@@ -5,7 +5,7 @@ const listEl = (document.getElementsByClassName('app__list'))[0]
 
 function createTask(someText) {
     const root = document.createElement('div')
-    root.classList.add('app_list-item')
+    root.classList.add('app__ist-item')
 
 
     const input = document.createElement('input')
