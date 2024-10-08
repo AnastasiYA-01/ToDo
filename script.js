@@ -14,7 +14,7 @@ function createTask(someText) {
     input.type = 'checkbox'
 
     const txt = document.createElement('p')
-    txt.classList.add('app_list-item-text')
+    txt.classList.add('app__list-item-text')
     txt.innerText = someText
 
     const btn = document.createElement('button')
